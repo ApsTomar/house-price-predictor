@@ -24,16 +24,16 @@ preprocessing.set_path(path)
 
 data, X_train, X_test, y_train, y_test = load_house_data()
 # data visualization:
-# preprocessing.preprocess_data(data)
+preprocessing.preprocess_data(data)
 
-# # applying adaBoost:
-# adaBoost_score = adaBoost.ada_boost(X_train, X_test, y_train, y_test)
-# print('adaBoost: explained_variance_score: %f' % adaBoost_score)
-#
-# # applying gradient_boost:
-# gradient_boost_score = gradient_boosting.gradient_boost(X_train, X_test, y_train, y_test)
-# print('gradient_boost: explained_variance_score: %f' % gradient_boost_score)
-#
-# # applying xg_boost:
+# applying adaBoost:
+adaBoost_score = adaBoost.ada_boost(X_train, X_test, y_train, y_test)
+print('adaBoost: explained_variance_score: %f' % adaBoost_score)
+
+# applying gradient_boost:
+gradient_boost_score = gradient_boosting.gradient_boost(X_train, X_test, y_train, y_test)
+print('gradient_boost: explained_variance_score: %f' % gradient_boost_score)
+
+# applying xg_boost:
 xgBoost_score = xg_boosting.xg_boost(X_train, X_test, y_train, y_test)
 print('xg_boost: explained_variance_score: %f' % xgBoost_score)
